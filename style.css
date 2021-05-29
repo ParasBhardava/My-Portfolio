@@ -1,0 +1,747 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.max-width
+{
+    width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* navbar css */
+.navbar
+{
+    position:fixed;
+    width: 100%;
+    z-index: 1;
+    /* background-color: rgb(6, 52, 122); */
+    padding: 15px 0;
+    letter-spacing: 2px;
+}
+
+.navbar.sticky
+{
+    padding: 15px 0;
+    background-color: rgb(6, 52, 122);;
+}
+
+.navbar .max-width
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo
+{
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar li
+{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a
+{
+    text-decoration: none;
+    color: white;
+    font-family: 'Verdana', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar .menu a:hover
+{
+    border: 1px solid white;
+    color: tomato;
+    transition: 1s;
+}
+
+.menu-btn
+{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+/* home section css */
+.home
+{
+    /* position: absolute; */
+    height: 100vh;
+    letter-spacing: 3px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .slider p.small
+{
+    margin-top: 40vh;
+    text-align:center;
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.home .slider p.big
+{   
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.home .slider .slide1, .home .slider .slide2, .home .slider .slide3
+{   
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.home .slider .slide1
+{
+    background-image: url('images/img1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade1 20s infinite;
+}
+
+.home .slider .slide2
+{
+    background-image: url('images/img2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade2 20s infinite;
+}
+
+.home .slider .slide3
+{
+    background-image: url('images/img4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade3 20s infinite;
+}
+
+@keyframes fade1
+{
+    0%
+    {
+        opacity: 1;
+    }
+
+    25%
+    {
+        opacity: 0;
+    }
+
+    75%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fade2
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    25%
+    {
+        opacity: 1;
+    }
+
+    75%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@keyframes fade3
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    25%
+    {
+        opacity: 0;
+    }
+
+    75%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+/* About Section css */
+
+section.about, section.contact
+{
+    padding: 100px 0;
+    background-color: rgb(32, 26, 26);
+    color: white;
+    letter-spacing: 2px;
+}
+
+.about
+{
+    font-family: Georgia, sans-serif;
+}
+
+.about .max-width
+{
+    width: 100%;
+}
+
+.about .title, .skills .title, .contact .title{
+    text-decoration:  4px solid underline cyan;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.about .about-content, .skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;    
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left
+{
+    width: 45%;
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.about .about-content .right
+{
+    width: 55%;
+}
+
+.about .about-content .right .text, .contact .contact-content .text{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: tomato;
+}
+
+.about .about-content .right p{
+    text-align: justify;
+    font-size: 20px;
+}
+
+.about .about-content .right a
+{
+    display: inline-block;
+    color: white;
+    background-color: tomato;
+    font-size: 25px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid tomato;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+
+.about .about-content .right a:hover
+{
+    color: tomato;
+    background: none;
+}
+
+/* Skillst section css */
+
+section.skills{
+    padding: 100px 0;
+    background-color: rgb(54, 51, 51);
+    color: white;
+    letter-spacing: 2px;
+}
+
+.skills .max-width
+{
+    width: 100%;
+}
+
+.skills .skills-content .left
+{
+    width: 45%;
+}
+
+.skills .skills-content .right
+{
+    width: 45%;
+}
+
+.skills .skill-bar
+{
+    /* width: 500px; */
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 8px 8px 10px grey;/*rgba(13, 98, 194, 0.945)*/
+}
+
+.skills .skill-bar h2
+{
+    text-align: center;
+    color: grey;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+}
+
+.skills .skill-bar .bar
+{
+    margin: 20px 0;
+}
+
+.skills .skill-bar .bar:first-child
+{
+    margin-top: 0px;
+}
+
+.skills .skill-bar .bar .info
+{
+    margin-bottom: 5px;
+    color: black;
+    font-family: 'Verdana', sans-serif;
+}
+
+.skills .skill-bar .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.skills .skill-bar .bar .progress-line
+{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 1px rgba(255, 255, 255, 0.8) ;
+}
+
+.skills .skill-bar .bar .progress-line span
+{
+    height: 100%;
+    width: 80%;
+    background: rgba(105, 13, 141, 0.733);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.skills .skill-bar .bar .progress-line span::before{
+    position:absolute;
+    content:"";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+}
+
+.skills .skill-bar .bar .progress-line span::after{
+    position: absolute;
+    content: "80%";
+    right: 0;
+    top: -28px;
+    color: #fff;
+    background: rgb(0, 0, 0);
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.skills .skill-bar .bar .progress-line.html span{
+    width: 80%;
+}
+
+.skills .skill-bar .bar .progress-line.css span{
+    width: 60%;
+}
+
+.skills .skill-bar .bar .progress-line.javascript span{
+    width: 70%;
+}
+
+.skills .skill-bar .bar .progress-line.php span{
+    width: 65%;
+}
+
+.skills .skill-bar .bar .progress-line.mysql span{
+    width: 55%;
+}
+
+.skills .skill-bar .bar .progress-line.c span{
+    width: 85%;
+}
+
+.skills .skill-bar .bar .progress-line.cpp span{
+    width: 70%;
+}
+
+.skills .skill-bar .bar .progress-line.html span::after
+{
+    content:"80%";
+}
+
+.skills .skill-bar .bar .progress-line.css span::after
+{
+    content:"60%";
+}
+
+.skills .skill-bar .bar .progress-line.javascript span::after
+{
+    content:"70%";
+}
+
+.skills .skill-bar .bar .progress-line.php span::after
+{
+    content:"65%";
+}
+
+.skills .skill-bar .bar .progress-line.mysql span::after
+{
+    content:"55%";
+}
+
+.skills .skill-bar .bar .progress-line.c span::after
+{
+    content:"85%";
+}
+
+.skills .skill-bar .bar .progress-line.cpp span::after
+{
+    content:"70%";
+}
+
+/* Contact Section css */
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .max-width
+{
+    width: 100%;
+}
+
+.contact .contact-content .icons{
+    margin: 20px 0; 
+}
+
+.contact .contact-content .row{
+    display: flex;
+    height: 65px; 
+}
+
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i{
+    margin-top: 10px;
+    font-size: 25px;
+    color: darkgrey
+}
+
+.contact .contact-content .info .head{
+    font-size: 20px;
+    font-family: 'Verdana';
+    font-weight: 500;
+}
+
+.contact .contact-content .info .subtitle{
+    font-size: 20px;
+    font-family: 'Verdana';
+    font-weight: 500;
+}
+
+.contact .contact-content .social i
+{
+    font-size: 40px;
+    margin: 20px 30px;
+}
+
+.contact .contact-content .social i.insta{
+    color: rgb(219, 49, 163);
+}
+
+.contact .contact-content .social i.linkedin{
+    color: blue;
+}
+
+/* Footer css */
+footer{
+    text-align: center;
+    background:rgb(54, 51, 51);
+    padding: 20px 23px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Ubuntu';
+    letter-spacing: 2px;
+}
+
+footer p{
+    margin-bottom: 8px;
+}
+
+footer span{
+    color: tomato
+}
+
+/* media queries */
+
+@media (max-width: 960px)
+{
+    .max-width
+    {
+        padding: 0 50px
+    }
+
+    .menu-btn
+    {
+        display: block;
+        z-index: 1;
+    }
+
+    .navbar .menu
+    {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: -120%;
+        left: 0%;
+        background: #111;
+        text-align: center;
+        padding-top:80px;
+        text-align: center;
+        transition: all 0.5s ease;
+        overflow: hidden;
+    }
+
+    .navbar .menu.active
+    {
+        top: 0;
+    }
+
+    .navbar .menu li
+    {
+        display: block;
+    }
+
+    .navbar .menu li a
+    {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .home .slider p.small
+    {
+        font-size: 25px;
+    }
+
+    .home .slider p.big
+    {   
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 700px)
+{
+    .max-width
+    {
+        padding: 0 23px;
+    }
+
+    .home .slider p.small
+    {
+        font-size: 20px;
+    }
+
+    .home .slider p.big
+    {   
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 500px)
+{
+    .navbar .logo
+    {
+        font-size: 30px;
+    }
+    
+    .home .slider p.small
+    {
+        font-size: 18px;
+    }    
+
+    .home .slider p.big
+    {   
+        font-size: 47px;
+    }    
+
+    .about .about-content .right .text, .contact .contact-content .text
+    {
+        font-size: 22px;
+    }    
+
+    .about .about-content .right p,
+    .contact .contact-content .row .info .head,
+    .contact .contact-content .row .info .subtitle
+    {
+        font-size: 15px;
+    }    
+
+    .contact .contact-content .icons{
+        margin: 15px 0; 
+    }    
+
+    .contact .contact-content .row i{
+        font-size: 20px;
+    }    
+
+    .contact .contact-content .row .info{
+        margin-left: 30px;
+    }    
+
+    .contact .contact-content{
+        letter-spacing: 0px;
+    }
+
+    .skills .skill-bar h2
+    {
+        font-size: 25px;
+    }
+
+    .skills .skill-bar .bar .info span{
+        font-size: 14px;
+    }    
+
+    .about .title, .skills .title, .contact .title{
+        font-size: 35px;
+    }
+
+    footer{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 310px)
+{
+    .navbar .logo
+    {
+        font-size: 23px;
+    }
+
+    .contact .contact-content .row .info{
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1120px)
+{
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 370px)
+{
+    .about .about-content .left img
+    {
+        width: 100%;
+    }
+
+    .contact .contact-content .social i
+    {
+        margin: 10px 10px;
+    }    
+}
+
+@media (max-width: 1020px)
+{
+    .about .about-content .column{
+        width: 50%;
+    }
+}
+
+@media (max-width: 960px)
+{
+    .about .about-content .column, .skills .skills-content .column{
+        width: 100%;
+    }
+    .about .about-content .left, .skills .skills-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .skills .skills-content .left .skill-bar{
+        width: 100%;
+    }
+
+    .about .about-content .right, .skills .skills-content .right{
+        flex: 100%;
+    }
+}
+
+
