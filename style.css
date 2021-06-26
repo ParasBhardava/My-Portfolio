@@ -32,7 +32,8 @@ html{
 .navbar.sticky
 {
     padding: 15px 0;
-    background-color: rgb(6, 52, 122);;
+    background-color: rgb(6, 52, 122);
+    transition: all 0.5s ease;
 }
 
 .navbar .max-width
@@ -515,18 +516,38 @@ section.skills{
 
 .contact .contact-content .social i
 {
+    padding: 8px;
     font-size: 40px;
     margin: 20px 30px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: all 0.5s ease;
 }
-
 .contact .contact-content .social i.insta{
     color: rgb(219, 49, 163);
+}
+
+.contact .contact-content .social i.insta:hover{
+    border-color: rgb(219, 49, 163);
+    background-color: rgb(219, 49, 163);
+    color: white;
 }
 
 .contact .contact-content .social i.linkedin{
     color: blue;
 }
 
+.contact .contact-content .social i.linkedin:hover{
+    border-color: dodgerblue;
+    background-color: dodgerblue;
+    color: black;
+}
+
+.contact .contact-content .social i.github:hover{
+    border-color: #6e5494;
+    background-color: #6e5494;
+    color: black;
+}
 /* Footer css */
 footer{
     text-align: center;
