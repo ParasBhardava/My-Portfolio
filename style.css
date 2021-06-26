@@ -11,6 +11,21 @@ html{
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: rgb(105, 187, 214);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: dodgerblue;
+}
+
 .max-width
 {
     width: 1300px;
